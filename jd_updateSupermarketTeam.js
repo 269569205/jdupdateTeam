@@ -39,7 +39,7 @@ function showMsg() {
     try {
       console.log(`等待五秒后刷新CDN缓存`);
       await $.wait(5000);
-      await $.http.get({url: `https://purge.jsdelivr.net/gh/lxk0301/updateTeam@master/jd_updateTeam.json`}).then((resp) => {
+      await $.http.get({url: `https://raw.githubusercontent.com/269569205/jdupdateTeam/master/shareCodes/jd_updateTeam.json`}).then((resp) => {
         if (resp.statusCode === 200) {
           console.log(`已刷新CDN缓存`)
         } else {
